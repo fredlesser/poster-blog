@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+.article {
+  flex: 1;
+  position: relative;
+
+  & > .markdown {
+    column-count: 1;
+    column-width: auto;
+    padding: 20px;
+
+    @include respond-to(medium) {
+      // columns: 150px 2;
+      padding: 50px 250px;
+      text-align: justify;
+  }
+
+    p {
+      margin-bottom: .5em;
+      font-size: .9em;
+      line-height: 1.6;
+
+      &:first-child:first-letter {
+        float: left;
+        color: darken($lightGray, 40%);
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 1px;
+        padding-right: 4px;
+        padding-left: 3px;
+      }
+    }
+  }
+
+  h1 {
+    // @extend %h1;
+  }
+
+  h2 {
+    text-transform: capitalize;
+    margin-bottom: .3em;
+    column-span: all;
+  }
+}

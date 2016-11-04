@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.button {
+  color: $dark;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    color: $ochre;
+  }
+}
+
+
+.button-group {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+
+  @include respond-to(small) {
+    bottom: 20px;
+    left: 20px
+  }
+}

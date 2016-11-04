@@ -1,0 +1,48 @@
+$dark: #1A2930;
+$lightGray: #C1C5C0;
+$marigold: #F7CE3E;
+$daisy: #e9e7da;
+$paper: lighten($daisy, 5%);
+$green: #636b46;
+$smoke: #6e7376;
+$ochre: #c06014;
+
+$mono: 'Cutive Mono', monospace;
+
+
+%h1 {
+  position: fixed;
+  z-index: -1;
+  transform: rotate(-90deg);
+  transform-origin: 60vh 50vh;
+  color: $lightGray;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  font-size: 60vh;
+}
+
+$breakpoints: (
+  'small'  : 767px,
+  'medium' : 992px,
+  'large'  : 1200px,
+);
+
+@mixin respond-to($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

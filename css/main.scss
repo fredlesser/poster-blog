@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+body {
+  background: #fff;
+}
+
+main {
+  height: 100vh;
+}
+
+main + div {
+  display: flex;
+  height: 100%;
+}
+
+.fade-enter {
+  opacity: 0;
+  display: none;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: .25s ease-in all;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: .25s ease-in all;
+}
+
+.fade-appear {
+  opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
