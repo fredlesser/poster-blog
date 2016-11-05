@@ -8,23 +8,12 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import TogglePanel from 'components/TogglePanel'
 
 class Template extends React.Component {
+
+  componentWillUpdate() {
+    var closeTimeline = this.refs.foo.closePanel();
+  }
   render () {
     const { location, children } = this.props
-    let header
-    if (location.pathname === prefixLink('/')) {
-      header = (
-        <header>
-          <h1><Link to={prefixLink('/')} > <img src={prefixLink('/icon.png')} /> {config.blogTitle} </Link></h1>
-          <h2>{config.subTitle}</h2>
-        </header>
-      )
-    } else {
-      header = (
-        <header>
-          <h3><Link to={prefixLink('/')} > <img src={prefixLink('/icon.png')} /> {config.blogTitle} </Link></h3>
-        </header>
-      )
-    }
 
     return (
     <main className="main">
@@ -38,7 +27,7 @@ class Template extends React.Component {
           >
       {React.cloneElement(children, {key: location.pathname})}
       </ReactCSSTransitionGroup>
-      <TogglePanel pages={this.props.route.pages} />
+      <TogglePanel ref='foo' pages={this.props.route.pages} />
     </main>
     )
   }
