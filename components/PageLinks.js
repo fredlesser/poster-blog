@@ -7,6 +7,8 @@ import include from 'underscore.string/include'
 import moment from 'moment'
 import Tags from 'components/Tags'
 
+import '../css/page-links.scss'
+
 class PageLinks extends React.Component {
   render (props) {
     const pageLinks = []
@@ -18,21 +20,25 @@ class PageLinks extends React.Component {
         const title = access(page, 'data.title') || page.path
         pageLinks.push(
           <li key={page.path}>
+            <span>
+              {moment(page.data.date).calendar()}
+            </span>
             <Link to={prefixLink(page.path)}>
             {title}
             </Link>
-            <div>
-              {moment(page.data.date).calendar()}
-            </div>
-            <div>
-              <Tags post={page.data} />
-            </div>
+            <Tags post={page.data} />
           </li>
         )
       }
     })
     return (
-      <ul>
+      <ul className="page-links">
+        <li><h2>Index</h2></li>
+        <li className="page-links__header">
+          <span>Published</span>
+          <span>Title</span>
+          <span>Tagged under</span>
+        </li>
         {pageLinks}
       </ul>
     )

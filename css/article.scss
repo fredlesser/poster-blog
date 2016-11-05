@@ -4,14 +4,18 @@
   flex: 1;
   position: relative;
 
-  & > .markdown {
+  & > * {
     column-count: 1;
     column-width: auto;
     padding: 20px;
 
     @include respond-to(medium) {
+      padding: 50px 150px;
+    }
+
+    @include respond-to(large) {
       // columns: 150px 2;
-      padding: 50px 250px;
+      padding: 50px 350px;
       text-align: justify;
   }
 
@@ -34,11 +38,28 @@
 
   h1 {
     // @extend %h1;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   h2 {
     text-transform: capitalize;
     margin-bottom: .3em;
     column-span: all;
+  }
+
+  h6 {
+    margin-bottom: 10px;
+  }
+
+  &__meta {
+    padding: 10px 0;
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+
+    & > span {
+      margin: 0 3px;
+    }
   }
 }

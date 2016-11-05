@@ -29,12 +29,13 @@ class MarkdownWrapper extends React.Component {
     <section className="article">
       <div className="markdown">
         <h1>{post.title}</h1>
-        {!post.date ? null : <div>
-                               {`Posted ${moment(post.date).calendar().toLowerCase()}`}
-                             </div>}
-        <Tags post={post} />
-        <div className="article" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
-
+        <div ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
+        <div className="article__meta">
+          {!post.date ? null : <span>
+                                 {`Posted on ${moment(post.date).calendar().toLowerCase()}`}
+                               </span>}
+          <span>in</span><Tags post={post} />
+        </div>
         <ReadNext post={post} pages={route.pages} />
 
         {config.disqusShortname ? <Disqus

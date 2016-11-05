@@ -43,14 +43,14 @@ class BlogTags extends React.Component {
     const allTags = tag ? [] : getAllTags(this.props.route.pages)
     return (
     <DocumentTitle title={tag ? `${tag} - ${config.blogTitle}` : config.blogTitle}>
-      <div>
+    <section className="article">
         {tag ? <ShowTag tag={tag} pages={this.props.route.pages} /> : null}
         {!tag ? allTags.map((tag, i) => <ShowTag
                                           hideSummary={true}
                                           key={i}
                                           tag={tag}
                                           pages={this.props.route.pages} />) : null}
-      </div>
+      </section>
     </DocumentTitle>
     )
   }

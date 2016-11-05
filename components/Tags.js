@@ -6,14 +6,14 @@ import { prefixLink } from 'gatsby-helpers'
 const Tags = props => {
   const { post, ...rest } = props
   return (
-    <div className="Tags" {...rest}>
+    <span className="Tags" {...rest}>
       {(props.post.tags || []).map((tag, i) => {
          return [i !== 0 ? ' | ' : null,
            <Link key={i} to={{pathname:prefixLink('/tags/'), hash: '#'+tagMap(tag)}}>
              {tag}
            </Link>]
        })}
-    </div>
+    </span>
   )
 }
 

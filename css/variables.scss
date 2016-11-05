@@ -2,12 +2,16 @@ $dark: #1A2930;
 $lightGray: #C1C5C0;
 $marigold: #F7CE3E;
 $daisy: #e7e9da;
-$paper: lighten($daisy, 5%);
+$paper: lighten($daisy, 7%);
 $green: #636b46;
 $smoke: #6e7376;
 $ochre: #c06014;
 
 $mono: 'Cutive Mono', monospace;
+
+a {
+  color: $ochre;
+}
 
 
 %h1 {

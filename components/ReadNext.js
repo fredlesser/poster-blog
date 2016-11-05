@@ -8,18 +8,8 @@ import { rhythm, scale } from 'utils/typography'
 import { getTags } from 'utils'
 import Summary from 'components/Summary'
 
-const style = {
-  h6: {
-    margin: 0,
-    fontSize: scale(-0.5).fontSize,
-    lineHeight: scale(-0.5).lineHeight,
-    letterSpacing: -0.25
-  },
-  h3: {
-    marginTop: 0,
-    marginBottom: rhythm(1 / 4)
-  }
-}
+import '../css/read-next.scss'
+
 
 class ReadNext extends React.Component {
   render () {
@@ -56,9 +46,9 @@ class ReadNext extends React.Component {
       )
 
       return (
-      <div>
-        <h6 style={style.h6}>READ THIS NEXT:</h6>
-        <h3 style={style.h3}><Link to={{  pathname: prefixLink(nextPost.path)}} > {nextPost.data.title} </Link></h3>
+      <div className="read-next">
+        <h6>You might also like:</h6>
+        <h4><Link to={{  pathname: prefixLink(nextPost.path)}} > {nextPost.data.title} </Link></h4>
         <Summary body={nextPost.data.body} />
       </div>
       )

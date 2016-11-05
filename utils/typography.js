@@ -14,6 +14,7 @@ const options = {
       styles: [
         '300',
         '400',
+        '600',
       ],
     },
     {
@@ -26,7 +27,7 @@ const options = {
       ],
     },
   ],
-  headerFontFamily: ['Crimson Text', 'serif'],
+  headerFontFamily: ['Hind', 'sans-serif'],
   bodyFontFamily: ['Crimson Text', 'serif'],
   baseFontSize: '18px',
   baseLineHeight: 1.65,
