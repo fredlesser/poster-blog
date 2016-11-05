@@ -49,7 +49,7 @@ class ReadNext extends React.Component {
       <div className="read-next">
         <h6>You might also like:</h6>
         <h4><Link to={{  pathname: prefixLink(nextPost.path)}} > {nextPost.data.title} </Link></h4>
-        <Summary body={nextPost.data.body} />
+        {/*<Summary body={nextPost.data.body} />*/}
       </div>
       )
     }

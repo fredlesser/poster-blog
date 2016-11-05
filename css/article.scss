@@ -5,61 +5,59 @@
   position: relative;
 
   & > * {
-    column-count: 1;
-    column-width: auto;
-    padding: 20px;
-
-    @include respond-to(medium) {
-      padding: 50px 150px;
-    }
-
-    @include respond-to(large) {
-      // columns: 150px 2;
-      padding: 50px 350px;
-      text-align: justify;
+    padding: 50px;
+    text-align: justify;
   }
 
-    p {
-      margin-bottom: .5em;
-      font-size: .9em;
-      line-height: 1.6;
-
-      &:first-child:first-letter {
-        float: left;
-        color: darken($lightGray, 40%);
-        font-size: 75px;
-        line-height: 60px;
-        padding-top: 1px;
-        padding-right: 4px;
-        padding-left: 3px;
-      }
-    }
+  .markdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
   }
 
-  h1 {
+  &__title {
     // @extend %h1;
-    margin-bottom: 10px;
+    flex: 1 0 100%;
+    margin-bottom: 50px;
     font-weight: 600;
     letter-spacing: -0.025em;
-  }
-
-  h2 {
-    text-transform: capitalize;
-    margin-bottom: .3em;
-    column-span: all;
-  }
-
-  h6 {
-    margin-bottom: 10px;
   }
 
   &__meta {
     padding: 10px 0;
     font-family: 'Hind', sans-serif;
     font-size: 14px;
+    flex: 0 1 20%;
 
     & > span {
       margin: 0 3px;
+    }
+
+    h2, h6 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__body {
+    flex: 0 0 50%;
+    margin-left: 50px;
+  }
+
+
+
+  p {
+    margin-bottom: .5em;
+    // font-size: .9em;
+    // line-height: 1.6;
+
+    &:first-child:first-letter {
+      float: left;
+      color: darken($lightGray, 40%);
+      font-size: 75px;
+      line-height: 60px;
+      padding-top: 1px;
+      padding-right: 4px;
+      padding-left: 3px;
     }
   }
 }

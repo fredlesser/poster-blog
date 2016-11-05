@@ -28,15 +28,16 @@ class MarkdownWrapper extends React.Component {
     <DocumentTitle title={post.title ? `${post.title} | ${config.blogTitle}` : config.blogTitle}>
     <section className="article">
       <div className="markdown">
-        <h1>{post.title}</h1>
-        <div ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
+        <h1 className="article__title">{post.title}</h1>
         <div className="article__meta">
-          {!post.date ? null : <span>
-                                 {`Posted on ${moment(post.date).calendar().toLowerCase()}`}
-                               </span>}
-          <span>in</span><Tags post={post} />
+          {!post.date ? null : <h2>
+                                 {`${moment(post.date).calendar().toLowerCase()}`}
+                               </h2>}
+          <span>Posted in</span><Tags post={post} />
         </div>
+        <div className="article__body" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
         <ReadNext post={post} pages={route.pages} />
+
 
         {config.disqusShortname ? <Disqus
                                     shortname={config.disqusShortname}
