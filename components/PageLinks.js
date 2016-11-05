@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import include from 'underscore.string/include'
 import moment from 'moment'
+import Tags from 'components/Tags'
 
 class PageLinks extends React.Component {
   render (props) {
@@ -22,6 +23,9 @@ class PageLinks extends React.Component {
             </Link>
             <div>
               {moment(page.data.date).calendar()}
+            </div>
+            <div>
+              <Tags post={page.data} />
             </div>
           </li>
         )
