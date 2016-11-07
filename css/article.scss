@@ -3,59 +3,82 @@
 .article {
   flex: 1;
   position: relative;
+  background: $paper;
 
   & > * {
-    padding: 50px;
-    text-align: justify;
+    padding: 50px 100px;
   }
 
   .markdown {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    flex-direction: column;
+    height: 100%;
   }
 
   &__title {
-    // @extend %h1;
-    flex: 1 0 100%;
     margin-bottom: 50px;
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    width: 100%;
+  }
+
+  &__hero {
+    width: 100%;
+    flex: 1 0 300px;
+    background-size: cover;
+    // width: calc(100% + 200px);
+    // margin-left: -100px;
+    // margin-right: -100px;
   }
 
   &__meta {
+
+    h4 {
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  &__sidebar {
     padding: 10px 0;
     font-family: 'Hind', sans-serif;
-    font-size: 14px;
-    flex: 0 1 20%;
-
-    & > span {
-      margin: 0 3px;
-    }
-
-    h2, h6 {
-      margin-bottom: 10px;
-    }
+    flex: 1 1 20%;
   }
 
-  &__body {
-    flex: 0 0 50%;
-    margin-left: 50px;
+  &__footer {
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      width: calc(100% + 200px);
+      margin-left: -100px;
+      border-top: 1px dotted $lightGray;
+    }
   }
+}
 
-
+.article__body {
+  flex: 1 1 80%;
+  margin-left: 20px;
+  padding-top: 9px;
 
   p {
     margin-bottom: .5em;
-    // font-size: .9em;
-    // line-height: 1.6;
 
-    &:first-child:first-letter {
+    &:nth-child(1):first-letter {
       float: left;
       color: darken($lightGray, 40%);
-      font-size: 75px;
+      font-size: 80px;
       line-height: 60px;
-      padding-top: 1px;
+      padding-top: 5px;
       padding-right: 4px;
       padding-left: 3px;
     }

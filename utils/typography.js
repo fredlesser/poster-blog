@@ -10,7 +10,7 @@ const options = {
       styles: [ '400' ]
     },
     {
-      name: 'Hind',
+      name: 'Poppins',
       styles: [
         '300',
         '400',
@@ -27,9 +27,10 @@ const options = {
       ],
     },
   ],
-  headerFontFamily: ['Hind', 'sans-serif'],
+  headerFontFamily: ['Poppins', 'sans-serif'],
+  headerWeight: '300',
   bodyFontFamily: ['Crimson Text', 'serif'],
-  baseFontSize: '18px',
+  baseFontSize: '20px',
   baseLineHeight: 1.65,
   scale: 2.25,
 }

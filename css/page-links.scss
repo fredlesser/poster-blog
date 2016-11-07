@@ -4,35 +4,55 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $lightGray;
-  font-family: 'Hind', sans-serif;
-  font-size: 15px;
+  color: $dark;
+  font-weight: 300;
+  flex: 0 0 70%;
+  font-size: 25px;
 
   &__header {
-    font-weight: 600;
     padding: 5px!important;
   }
 
+  .tags {
+    text-align: right;
+  }
+
+  h6 {
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
   h2 {
-    color: $lightGray;
+    color: $dark;
     margin-bottom: 0px;
+    font-size: 35px;
   }
 
   li {
     display: flex;
     margin-right: 10px;
-    border-bottom: 1px dotted darken($lightGray, 50%);
+    border-bottom: 1px dotted darken($daisy, 50%);
     align-items: center;
     margin: 0;
     padding: 10px 5px;
+
+    &:first-child {
+      border: 0;
+    }
 
     & > * {
       flex: 1 1 33%;
     }
 
     a {
-      color: $lightGray;
+      color: $dark;
       text-decoration: none;
     }
+  }
+
+  .tags a {
+    display: inline-block;
   }
 }

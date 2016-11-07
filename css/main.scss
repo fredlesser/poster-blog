@@ -1,14 +1,18 @@
 @import 'variables.scss';
 
+html, body, body > div {
+  height: 100%;
+}
+
 body {
   background: $paper;
 }
 
 main {
-  height: 100vh;
+  height: 100%;
 }
 
-main + div {
+main > section {
   display: flex;
   height: 100%;
 }

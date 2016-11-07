@@ -1,9 +1,13 @@
 @import 'variables.scss';
 
 .read-next {
-  margin-top: 20px;
+  margin-top: 50px;
 
   h4 {
     margin: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 }

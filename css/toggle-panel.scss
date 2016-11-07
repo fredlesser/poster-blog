@@ -5,10 +5,10 @@
 }
 
 .slide-enter {
-  transform: translateX(100vw);
-  @include respond-to(medium) {
-    transform: translateX(50vw);
-  }
+  transform: translateX(-100vw);
+  // @include respond-to(medium) {
+  //   transform: translateX(50vw);
+  // }
 }
 
 .slide-enter-active {
@@ -21,19 +21,23 @@
 }
 
 .slide-leave-active {
-  transform: translateX(100vw);
-  @include respond-to(medium) {
-    transform: translateX(50vw);
-  }
+  transform: translateX(-100vw);
+  // @include respond-to(medium) {
+  //   transform: translateX(50vw);
+  // }
   transition: .25s ease-out all;
 }
 
 .button--toggle {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px 15px;
+  top: 30px;
+  left: -30px;
+  line-height: normal;
+  // padding: 5px 15px;
   z-index: 3;
+  transform: rotate(-90deg);
+  background: $dark;
+  color: $lightGray!important;
 
   @include respond-to(small) {
 
@@ -46,7 +50,7 @@
 
   &.active {
     &::after {
-      content: 'X Close';
+      content: 'Close';
     }
   }
 }

@@ -18,7 +18,7 @@ class Template extends React.Component {
     return (
     <main className="main">
       <ReactCSSTransitionGroup
-          component="div"
+          component="section"
           transitionName="fade"
           transitionEnterTimeout={1200}
           transitionLeaveTimeout={800}
