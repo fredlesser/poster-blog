@@ -1,13 +1,15 @@
 @import 'variables.scss';
+$text-color: lighten($dark, 20%);
 
 .page-links {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $dark;
+  color: $text-color;
   font-weight: 300;
   flex: 0 0 70%;
   font-size: 25px;
+  font-family: $serif;
 
   &__header {
     padding: 5px!important;
@@ -17,15 +19,23 @@
     text-align: right;
   }
 
+  .tags, .date {
+    display: none;
+    @include respond-to(small) {
+      display: block;
+    }
+  }
+
   h6 {
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
     margin: 0;
+    color: $text-color;
   }
 
   h2 {
-    color: $dark;
+    color: $text-color;
     margin-bottom: 0px;
     font-size: 35px;
   }
@@ -47,12 +57,12 @@
     }
 
     a {
-      color: $dark;
+      color: $text-color;
       text-decoration: none;
     }
   }
 
   .tags a {
-    display: inline-block;
+    // display: inline-block;
   }
 }

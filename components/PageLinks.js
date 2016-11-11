@@ -20,7 +20,7 @@ class PageLinks extends React.Component {
         const title = access(page, 'data.title') || page.path
         pageLinks.push(
           <li key={page.path}>
-            <span>
+            <span className="date">
               {moment(page.data.date).format('YYYY')}
             </span>
             <Link to={prefixLink(page.path)}>
@@ -35,7 +35,7 @@ class PageLinks extends React.Component {
       <ul className="page-links">
         <li><h2>Index</h2></li>
         <li className="page-links__header">
-          <h6>Published</h6>
+          <h6 className="date">Published</h6>
           <h6>Title</h6>
           <h6 className="tags">Tags</h6>
         </li>

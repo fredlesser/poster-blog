@@ -30,27 +30,37 @@
 
 .button--toggle {
   position: fixed;
+  width: 60px;
+  height: 60px;
   top: 30px;
-  left: -30px;
-  line-height: normal;
-  // padding: 5px 15px;
+  right: 30px;
+  padding: 0!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 3;
-  transform: rotate(-90deg);
   background: $dark;
   color: $lightGray!important;
+  font-family: $sans;
+  font-size: 50px;
+
 
   @include respond-to(small) {
-
+    line-height: normal;
+    padding: inherit;
   }
 
   &::after {
-    content: 'Index';
+    content: '+';
     vertical-align: middle;
+    display: block;
+    transition: .25s ease-out transform;
   }
 
   &.active {
+
     &::after {
-      content: 'Close';
+      transform: rotate(-45deg);
     }
   }
 }
