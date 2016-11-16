@@ -3,7 +3,7 @@ import moment from 'moment'
 import DocumentTitle from 'react-document-title'
 import { fixLinks } from 'utils'
 import { prefixLink } from 'gatsby-helpers'
-
+import Bio from 'components/Bio'
 import ReadNext from 'components/ReadNext'
 import Tags from 'components/Tags'
 import { rhythm } from 'utils/typography'
@@ -29,25 +29,31 @@ class MarkdownWrapper extends React.Component {
     <DocumentTitle title={post.title ? `${post.title} | ${config.blogTitle}` : config.blogTitle}>
       <div className="article">
         <header className="article__header">
-          {!post.hero ? null : <figure className="article__hero" style={bgStyle}></figure>}
-          <div className="article__intro">
-            <h1>{post.title}</h1>
-            <p>{post.intro}</p>
-          </div>
-
+          <h6><span>Tags:</span><Tags post={post} /></h6>
+          {!post.date ? null : <h6>
+                                 {`${moment(post.date).format('ll')}`}
+                               </h6>}
         </header>
-
-        <section className="article__body">
-          <aside className="article__meta">
-            {!post.date ? null : <h2>
-                                   {`${moment(post.date).format('ll')}`}
-                                 </h2>}
+        <section className="article__main">
+          <aside className="article__title">
+            <h1>{post.title}</h1>
           </aside>
-          <div className="markdown" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
+          <div className="article__body">
+            <p className="article__intro">{post.intro}</p>
+          </div>
+        </section>
+
+        {!post.hero ? null : <figure className="article__hero" style={bgStyle}></figure>}
+        <section className="article__main">
+          <aside className="article__meta">
+            <Bio />
+          </aside>
+          <div className="article__body">
+            <div className="markdown" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
+          </div>
         </section>
 
         <footer className="article__footer">
-         <h6><Tags post={post} /></h6>
          <ReadNext post={post} pages={route.pages} />
         </footer>
       </div>

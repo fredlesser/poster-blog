@@ -5,7 +5,7 @@
 }
 
 .slide-enter {
-  transform: translateX(-100vw);
+  transform: translateX(-60vw);
   // @include respond-to(medium) {
   //   transform: translateX(50vw);
   // }
@@ -21,7 +21,7 @@
 }
 
 .slide-leave-active {
-  transform: translateX(-100vw);
+  transform: translateX(-60vw);
   // @include respond-to(medium) {
   //   transform: translateX(50vw);
   // }
@@ -30,37 +30,24 @@
 
 .button--toggle {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  top: 30px;
-  right: 30px;
-  padding: 0!important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  left: 10%;
   z-index: 3;
-  background: $dark;
-  color: $lightGray!important;
-  font-family: $sans;
-  font-size: 50px;
+  cursor: pointer;
 
 
   @include respond-to(small) {
-    line-height: normal;
-    padding: inherit;
+
   }
 
   &::after {
-    content: '+';
-    vertical-align: middle;
-    display: block;
-    transition: .25s ease-out transform;
+    content: 'All posts';
   }
 
   &.active {
 
     &::after {
-      transform: rotate(-45deg);
+      content: 'x Close';
     }
   }
 }

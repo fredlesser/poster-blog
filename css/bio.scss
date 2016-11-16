@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.bio {
+  font-family: $sans;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px;
+  border-left: 1px solid darken($lightGray, 10%);
+}

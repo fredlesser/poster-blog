@@ -1,29 +1,20 @@
 @import 'variables.scss';
 
-.button {
-  color: $dark;
-  padding: 10px;
-  text-align: center;
-  // font-family: 'Cutive Mono', monospace;
-  cursor: pointer;
+.button, header h6 {
+  color: $pink;
+  padding-left: 5px;
+  font-family: $sans;
   text-decoration: none;
+  border-left: 1px solid lighten($pink, 20%);
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: .8;
 
   &:hover,
   &.active {
-    color: $ochre;
-  }
-}
 
-
-.button-group {
-  display: flex;
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 2;
-
-  @include respond-to(small) {
-    bottom: 20px;
-    left: 20px
   }
 }

@@ -11,6 +11,7 @@ class Template extends React.Component {
 
   componentWillUpdate() {
     var closeTimeline = this.refs.foo.closePanel();
+
   }
   render () {
     const { location, children } = this.props

@@ -21,14 +21,14 @@ class TogglePanel extends React.Component {
     this.setState({showPanel: false})
   }
 
-  isActive(){
-    return 'button button--toggle '+((!this.state.showPanel) ?'default':'active');
+  isOpen(){
+    return 'button button--toggle '+((!this.state.showPanel) ?'closed':'open');
   }
 
   render(props) {
     return (
       <div className="toggle-panel">
-        <a className={this.isActive('')} onClick={this.togglePanel.bind(this)}></a>
+        <a className={this.isOpen('')} onClick={this.togglePanel.bind(this)}></a>
         <ReactCSSTransitionGroup
           transitionName="slide"
           transitionEnterTimeout={500}
