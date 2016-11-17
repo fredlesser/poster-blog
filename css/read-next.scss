@@ -16,6 +16,11 @@
     text-transform: uppercase;
     // color: lighten($pink, 10%);
     color: $paper;
+
+    span {
+      margin-right: 5px;
+      color: darken($pink, 40%);
+    }
   }
 
   a {

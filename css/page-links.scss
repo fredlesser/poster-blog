@@ -7,9 +7,10 @@ $text-color: lighten($dark, 20%);
   list-style: none;
   color: $text-color;
   font-weight: 300;
-  flex: 0 0 70%;
-  font-size: 25px;
+  flex: 1 0 80%;
+  font-size: 26px;
   font-family: $serif;
+  text-align: left;
 
   &__header {
     padding: 5px!important;
@@ -44,16 +45,20 @@ $text-color: lighten($dark, 20%);
     display: flex;
     margin-right: 10px;
     border-bottom: 1px dotted darken($daisy, 50%);
-    align-items: center;
+    // align-items: center;
     margin: 0;
     padding: 10px 5px;
 
-    &:first-child {
-      border: 0;
+    // &:first-child {
+    //   border: 0;
+    // }
+
+    & > *:first-child {
+      flex: 0 0 20%;
     }
 
-    & > * {
-      flex: 1 1 33%;
+    & > *:last-child {
+      flex: 1;
     }
 
     a {

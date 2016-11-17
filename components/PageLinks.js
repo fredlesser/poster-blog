@@ -26,19 +26,19 @@ class PageLinks extends React.Component {
             <Link to={prefixLink(page.path)}>
             {title}
             </Link>
-            <Tags post={page.data} />
+            {/*<Tags post={page.data} />*/}
           </li>
         )
       }
     })
     return (
       <ul className="page-links">
-        <li><h2>Index</h2></li>
+        {/*<li><h2>Index</h2></li>
         <li className="page-links__header">
           <h6 className="date">Published</h6>
           <h6>Title</h6>
           <h6 className="tags">Tags</h6>
-        </li>
+        </li>*/}
         {pageLinks}
       </ul>
     )

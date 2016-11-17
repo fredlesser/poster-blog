@@ -1,11 +1,19 @@
 @import 'variables.scss';
 
-.toggle-panel {
-
+.toggle-panel.open {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(black, 0.3);
+  }
 }
 
 .slide-enter {
-  transform: translateX(-60vw);
+  transform: translateX(-30vw);
   // @include respond-to(medium) {
   //   transform: translateX(50vw);
   // }
@@ -14,6 +22,8 @@
 .slide-enter-active {
   transform: translateX(0);
   transition: .25s ease-in all;
+
+
 }
 
 .slide-leave {
@@ -21,7 +31,7 @@
 }
 
 .slide-leave-active {
-  transform: translateX(-60vw);
+  transform: translateX(-30vw);
   // @include respond-to(medium) {
   //   transform: translateX(50vw);
   // }
@@ -30,7 +40,7 @@
 
 .button--toggle {
   position: fixed;
-  top: 0;
+  top: 5px;
   left: 10%;
   z-index: 3;
   cursor: pointer;
@@ -44,7 +54,7 @@
     content: 'All posts';
   }
 
-  &.active {
+  &.open{
 
     &::after {
       content: 'x Close';

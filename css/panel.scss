@@ -6,12 +6,16 @@
   left: 0;
   bottom: 0;
   // left: 0;
-  background: $daisy;
+  background: #fff;
   overflow: hidden;
   padding: 20px;
-  width: 60vw;
+  width: 30vw;
   display: flex;
   justify-content: center;
+  z-index: 1;
+  border-top: 5px solid lighten($pink, 20%);
+  align-items: center;
+  box-shadow: 0 0 10px rgba(black, 0.4);
   // @include respond-to(medium) {
   //   width: 50vw;
   // }
