@@ -17,6 +17,10 @@ main > section {
   height: 100%;
 }
 
+img {
+  margin: 20px 0 10px 0;
+}
+
 .fade-enter {
   opacity: 0;
   display: none;
@@ -24,7 +28,7 @@ main > section {
 
 .fade-enter-active {
   opacity: 1;
-  transition: .25s ease-in all;
+  transition: .5s ease-in opacity;
 }
 
 .fade-leave {
@@ -33,14 +37,5 @@ main > section {
 
 .fade-leave-active {
   opacity: 0;
-  transition: .25s ease-in all;
-}
-
-.fade-appear {
-  opacity: 0.01;
-}
-
-.fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: .25s ease-in opacity;
 }
