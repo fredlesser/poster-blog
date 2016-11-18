@@ -8,7 +8,8 @@ tags:
   - Hello
   - world
   - demo
-hero: surf-shop.jpg
+hero: reels.jpg
+thumb: reels.jpg
 intro: The 1970s were perhaps the worst decade of most industrialized countries' economic performance since the Great Depression. Although there was no severe economic depression as witnessed in the 1930s, economic growth rates were considerably lower than previous decades.
 ---
  As a result, the 1970s adversely distinguished itself from the prosperous postwar period between 1945 and 1973. The oil shocks of 1973 and 1979 added to the existing ailments and conjured high inflation throughout much of the world for the rest of the decade. U.S. manufacturing industries began to decline as a result, with the United States running its last trade surplus (as of 2009) in 1975. In contrast, Japan's economy continued to expand and prosper during the decade, boosted by growing exports.

@@ -6,6 +6,7 @@ path: "/the-bolshoi-theatre/"
 readNext: "/the-nineteen-seventies/"
 tags:
   - demo
+thumb: ballet.jpg
 intro: The Bolshoi Theatre is a historic theatre in Moscow, Russia, designed by architect Joseph Bové, which holds performances of ballet and opera. The theatre's original name was the Imperial Bolshoi Theatre of Moscow, while the St. Petersburg Bolshoi Theatre (demolished in 1886), was called the Imperial Bolshoi Kamenny Theatre.
 ---
 The Bolshoi is a repertory theatre, meaning that it draws from a list of productions, any one of which may be performed on a given evening. It normally introduces two to four new ballet or opera productions each season and puts a similar number on hold. The sets and costumes for most productions are made in the Bolshoi's own workshops.
