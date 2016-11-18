@@ -8,8 +8,9 @@
   // border: 1px solid $pink;
   padding: 10px;
   position: fixed;
-  right: -86px;
+  right: 0;
   top: 50%;
+  transform-origin: 80% 6%;
 
   h6 {
     margin: 0;

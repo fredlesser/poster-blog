@@ -10,6 +10,7 @@ import Summary from 'components/Summary'
 import moment from 'moment'
 
 import '../css/article.scss'
+import '../css/index.scss'
 
 
 class BlogIndex extends React.Component {
@@ -28,16 +29,18 @@ class BlogIndex extends React.Component {
         };
         pageLinks.push(
           <li key={page.path}>
-            <h2>
-              <Link to={prefixLink(page.path)}>
-              {title}
-              </Link>
-            </h2>
             <div className="article__thumbnail" style={bgStyle}/>
-            <div>
-              {moment(page.data.date).calendar()}
+            <div className="article-index__text">
+              <h2 className="article-index__title">
+                <Link to={prefixLink(page.path)}>
+                {title}
+                </Link>
+              </h2>
+              <Summary body={page.data.body} />
+              <div className="article-index__date">
+                {moment(page.data.date).calendar()}
+              </div>
             </div>
-            <Summary body={page.data.body} />
           </li>
         )
       }
@@ -45,8 +48,8 @@ class BlogIndex extends React.Component {
 
     return (
     <DocumentTitle title={config.blogTitle}>
-      <div className="article">
-        <ul className="article__index">
+      <div className="article-index">
+        <ul>
           {pageLinks}
         </ul>
       </div>

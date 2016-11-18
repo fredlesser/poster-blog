@@ -11,25 +11,6 @@
   }
 }
 
-.article__index {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-
-  li {
-    flex: 0 0 350px;
-
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
-.article__thumbnail {
-  max-height: 150px;
-}
-
 .article__header {
   flex: none;
   display: flex;
