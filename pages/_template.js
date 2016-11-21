@@ -1,23 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { Container } from 'react-responsive-grid'
-import { prefixLink } from 'gatsby-helpers'
-import { rhythm, scale } from 'utils/typography'
-import { config } from 'config'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import TogglePanel from 'components/TogglePanel'
+import Header from 'components/Header'
+import Menu from 'components/Menu'
 
 class Template extends React.Component {
 
-  componentWillUpdate() {
-    var closeTimeline = this.refs.foo.closePanel();
-
-  }
   render () {
     const { location, children } = this.props
 
     return (
     <main className="main">
+      <Menu pages={this.props.route.pages} />
+      <Header />
       <ReactCSSTransitionGroup
           component="section"
           transitionName="fade"
@@ -26,9 +21,11 @@ class Template extends React.Component {
           transitionAppear={true}
           transitionAppearTimeout={1200}
           >
-      {React.cloneElement(children, {key: location.pathname})}
+        <section className="content">
+          {React.cloneElement(children, {key: location.pathname})}
+        </section>
       </ReactCSSTransitionGroup>
-      <TogglePanel ref='foo' pages={this.props.route.pages} />
+      <TogglePanel />
     </main>
     )
   }

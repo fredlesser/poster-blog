@@ -4,7 +4,6 @@ import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
 import intersect from 'just-intersect'
-import { rhythm, scale } from 'utils/typography'
 import { getTags } from 'utils'
 import Summary from 'components/Summary'
 

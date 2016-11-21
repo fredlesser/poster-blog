@@ -1,12 +1,12 @@
 import React from 'react';
-import '../css/panel.scss'
+import '../css/menu.scss'
 import PageLinks from 'components/PageLinks'
 
-const Panel = (props) => {
+const Menu = (props) => {
   return (
-    <section className="panel">
+    <section className="menu">
       <PageLinks pages={props.pages} />
     </section>
   )
 }
-export default Panel;
+export default Menu;

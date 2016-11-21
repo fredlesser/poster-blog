@@ -1,11 +1,10 @@
 @import 'variables.scss';
 
 .button, header h6 {
-  color: $pink;
+  color: $dark;
   padding-left: 5px;
-  font-family: $sans;
+  font-family: $mono;
   text-decoration: none;
-  border-left: 1px solid lighten($pink, 20%);
   display: flex;
   align-items: flex-end;
   height: 50px;

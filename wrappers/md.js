@@ -28,12 +28,6 @@ class MarkdownWrapper extends React.Component {
     return (
     <DocumentTitle title={post.title ? `${post.title} | ${config.blogTitle}` : config.blogTitle}>
       <div className="article">
-        <header className="article__header">
-          <h6><span>Tags:</span><Tags post={post} /></h6>
-          {!post.date ? null : <h6>
-                                 {`${moment(post.date).format('ll')}`}
-                               </h6>}
-        </header>
         <section className="article__main">
           <aside className="article__title">
             <h1>{post.title}</h1>
@@ -46,6 +40,10 @@ class MarkdownWrapper extends React.Component {
         {!post.hero ? null : <figure className="article__hero" style={bgStyle}></figure>}
         <section className="article__main">
           <aside className="article__meta">
+            <h6><span>Tags:</span><Tags post={post} /></h6>
+            {!post.date ? null : <h6>
+                                   {`${moment(post.date).format('ll')}`}
+                                 </h6>}
             <Bio />
           </aside>
           <div className="article__body">
@@ -54,7 +52,7 @@ class MarkdownWrapper extends React.Component {
         </section>
 
         <footer className="article__footer">
-         <ReadNext post={post} pages={route.pages} />
+         {/*<ReadNext post={post} pages={route.pages} />*/}
         </footer>
       </div>
     </DocumentTitle>

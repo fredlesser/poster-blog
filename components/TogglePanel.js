@@ -1,5 +1,5 @@
 import React from 'react';
-import Panel from './Panel'
+import Search from './Search'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import '../css/toggle-panel.scss'
@@ -33,7 +33,7 @@ class TogglePanel extends React.Component {
           transitionName="slide"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
-          {this.state.showPanel && <Panel pages={this.props.pages} />}
+          {this.state.showPanel && <Search />}
         </ReactCSSTransitionGroup>
       </div>
     )

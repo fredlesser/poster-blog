@@ -11,11 +11,14 @@
   }
 }
 
+.content {
+  background: #fff;
+}
+
 .article__header {
   flex: none;
   display: flex;
   justify-content: flex-end;
-  border-top: 5px solid lighten($pink, 20%);
 
   h6 {
     flex: 0 0 auto;
