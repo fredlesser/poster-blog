@@ -28,32 +28,31 @@ class MarkdownWrapper extends React.Component {
     return (
     <DocumentTitle title={post.title ? `${post.title} | ${config.blogTitle}` : config.blogTitle}>
       <div className="article">
-        <section className="article__main">
-          <aside className="article__title">
-            <h1>{post.title}</h1>
-          </aside>
+      <section className="article__hero">
+        {!post.hero ? null : <figure style={bgStyle}></figure>}
+        <figcaption className="article__title"><h1>{post.title}</h1></figcaption>
+      </section>
+
+
+      <section className="article__main">
+        <div className="article__text">
+          <h2 className="article__subtitle">{post.subtitle}</h2>
           <div className="article__body">
             <p className="article__intro">{post.intro}</p>
+            <div className="markdown" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
           </div>
-        </section>
-
-        {!post.hero ? null : <figure className="article__hero" style={bgStyle}></figure>}
-        <section className="article__main">
+        </div>
+        <footer className="article__footer">
           <aside className="article__meta">
-            <h6><span>Tags:</span><Tags post={post} /></h6>
             {!post.date ? null : <h6>
                                    {`${moment(post.date).format('ll')}`}
                                  </h6>}
-            <Bio />
+            <h6><span>Tags:</span><Tags post={post} /></h6>
+            {/*<Bio />*/}
           </aside>
-          <div className="article__body">
-            <div className="markdown" ref="markdown" dangerouslySetInnerHTML={{__html: post.body}} />
-          </div>
-        </section>
-
-        <footer className="article__footer">
-         {/*<ReadNext post={post} pages={route.pages} />*/}
+         <ReadNext post={post} pages={route.pages} />
         </footer>
+      </section>
       </div>
     </DocumentTitle>
     )

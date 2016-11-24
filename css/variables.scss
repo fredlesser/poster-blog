@@ -1,5 +1,6 @@
 $dark: #1A2930;
-$lightGray: #C1C5C0;
+$gray: #C1C5C0;
+$lightGray: #e4e0dc;
 $marigold: #F7CE3E;
 $daisy: #e7e9da;
 $paper: lighten($daisy, 7%);
@@ -7,13 +8,14 @@ $green: #636b46;
 $smoke: #6e7376;
 $ochre: #c06014;
 $pink: #db5f8c;
+$red: #d22f2e;
 
 $mono: 'Cutative Mono', monospace;
 $sans: 'Poppins', sans-serif;
 $serif: 'Crimson Text', serif;
 
 a {
-  color: $pink;
+  color: $red;
 }
 
 

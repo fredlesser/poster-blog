@@ -37,29 +37,3 @@
   // }
   transition: .25s ease-in-out all;
 }
-
-.button--toggle {
-  position: fixed;
-  top: 5px;
-  left: 10%;
-  z-index: 3;
-  cursor: pointer;
-  transition: .25s ease-out all;
-
-
-  @include respond-to(small) {
-
-  }
-
-  &::after {
-    content: 'All posts';
-  }
-
-  &.open{
-    left: 30px;
-
-    &::after {
-      content: 'x Close';
-    }
-  }
-}

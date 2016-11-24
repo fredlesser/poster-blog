@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
 .site-header {
-  background: $lightGray;
+  background: #fff;
+  position: fixed;
+  min-height: 50px;
+  left: 30%;
+  width: 70%;
 }

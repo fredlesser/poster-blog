@@ -1,16 +1,18 @@
 @import 'variables.scss';
 
 .bio {
-  font-family: $sans;
+  font-family: $mono;
   font-size: 14px;
   line-height: 1.5;
-  padding: 20px;
-  border-left: 1px solid darken($lightGray, 10%);
 
   img {
     border-radius: 50%;
     float: left;
     margin: 0;
     margin-right: 10px;
+  }
+
+  em {
+    display: block;
   }
 }

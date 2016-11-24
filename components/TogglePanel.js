@@ -22,7 +22,7 @@ class TogglePanel extends React.Component {
   }
 
   isOpen(){
-    return 'button button--toggle '+((!this.state.showPanel) ?'closed':'open');
+    return 'button button--toggle-panel '+((!this.state.showPanel) ?'closed':'open');
   }
 
   render(props) {

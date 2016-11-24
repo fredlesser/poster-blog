@@ -1,16 +1,6 @@
 @import 'variables.scss';
 
 .read-next {
-  // flex: 1;
-  // text-align: right;
-  background: $pink;
-  transform: rotate(-90deg);
-  // border: 1px solid $pink;
-  padding: 10px;
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform-origin: 80% 6%;
 
   h6 {
     margin: 0;
@@ -20,7 +10,7 @@
 
     span {
       margin-right: 5px;
-      color: darken($pink, 40%);
+      color: darken($red, 40%);
     }
   }
 
