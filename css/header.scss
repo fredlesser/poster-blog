@@ -1,9 +1,16 @@
 @import 'variables.scss';
 
 .site-header {
-  background: #fff;
+  background: $marigold;
   position: fixed;
   min-height: 50px;
-  left: 30%;
-  width: 70%;
+  left: 0;
+  width: 100%;
+
+  & > .grid {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+  }
 }

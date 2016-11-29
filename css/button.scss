@@ -2,15 +2,13 @@
 
 .button {
   color: $dark;
-  // padding-left: 5px;
-  font-family: $mono;
   text-decoration: none;
   display: flex;
-  // align-items: flex-end;
   text-transform: uppercase;
-  font-size: 14px;
   line-height: .8;
   cursor: pointer;
+  font-size: 16px;
+  font-family: $sans;
 
   &:hover,
   &.active {
@@ -19,9 +17,6 @@
 }
 
 .button--menu {
-  position: absolute;
-  right: 20px;
-  top: 20px;
 
   &::after {
     content: 'Index';
@@ -29,28 +24,26 @@
 
   &::before {
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     background: url(menu.svg) no-repeat;
     margin-right: 5px;
-    margin-top: 1px;
+    margin-top: -2px;
   }
 }
 
 .button--toggle-panel {
-  position: fixed;
-  top: 20px;
-  left: calc(30% + 20px);
-  z-index: 3;
   transition: .25s ease-out all;
+  position: relative;
+  z-index: 2;
 
   &::before {
     content: '';
-    width: 10px;
-    height: 10px;
-    background: url(search.svg) no-repeat;
-    margin-right: 5px;
-    margin-top: 1px;
+    width: 14px;
+    height: 14px;
+    background: url(search2.svg) no-repeat;
+    margin-right: 4px;
+    margin-top: -2px;
   }
 
   @include respond-to(small) {

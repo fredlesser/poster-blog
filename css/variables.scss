@@ -1,6 +1,8 @@
 $dark: #1A2930;
 $gray: #C1C5C0;
-$lightGray: #e4e0dc;
+$midGray: #e4e0dc;
+$blueGray: lighten($dark, 70%);
+$lightGray: lighten($midGray, 7%);
 $marigold: #F7CE3E;
 $daisy: #e7e9da;
 $paper: lighten($daisy, 7%);

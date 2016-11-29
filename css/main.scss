@@ -21,21 +21,28 @@ img {
   margin: 20px 0 10px 0;
 }
 
-.fade-enter {
-  opacity: 0;
-  display: none;
+.slide-enter {
+  transform: translateY(-30vw);
+  // @include respond-to(medium) {
+  //   transform: translateX(50vw);
+  // }
 }
 
-.fade-enter-active {
-  opacity: 1;
-  transition: .5s ease-in opacity;
+.slide-enter-active {
+  transform: translateY(0);
+  transition: .25s ease-in-out all;
+
+
 }
 
-.fade-leave {
-  opacity: 1;
+.slide-leave {
+  transform: translateX(0);
 }
 
-.fade-leave-active {
-  opacity: 0;
-  transition: .25s ease-in opacity;
+.slide-leave-active {
+  transform: translateX(-30vw);
+  // @include respond-to(medium) {
+  //   transform: translateX(50vw);
+  // }
+  transition: .25s ease-in-out all;
 }

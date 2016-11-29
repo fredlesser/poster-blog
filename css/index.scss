@@ -1,6 +1,4 @@
 .article-index {
-
-  ul {
     list-style: none;
     margin: 0;
 
@@ -12,34 +10,34 @@
         text-decoration: none;
       }
     }
+
+
+  .article-index__text {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
   }
-}
 
-.article-index__text {
-  flex: 0 1 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 10%;
-}
+  .article-index__title {
 
-.article-index__title {
+  }
 
-}
+  .article-index__date {
 
-.article-index__date {
+  }
 
-}
+  .article__summary {
 
-.article__summary {
+  }
 
-}
+  .article__thumbnail {
+    // height: 100vh;
+    flex: 1 0 50%;
+    background-size: cover;
+  }
 
-.article__thumbnail {
-  height: 100vh;
-  flex: 1 0 50%;
-  background-size: cover;
-}
-
-.article-index ul li:nth-child(odd) .article__thumbnail  {
-  order: 1;
+  .article-index ul li:nth-child(odd) .article__thumbnail  {
+    order: 1;
+  }
 }

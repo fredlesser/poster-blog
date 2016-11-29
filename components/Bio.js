@@ -7,7 +7,7 @@ import '../css/bio.scss'
 
 const Bio = props => (
   <div className="bio">
-    <img src={prefixLink('/author.jpg')} alt={config.authorName} /><span dangerouslySetInnerHTML={{__html: config.authorBio}} />
+    <img src={prefixLink('/author.jpg')} alt={config.authorName} /><p dangerouslySetInnerHTML={{__html: config.authorBio}} />
   </div>
 )
 

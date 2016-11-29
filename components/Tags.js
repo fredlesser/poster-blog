@@ -9,7 +9,7 @@ const Tags = props => {
   return (
     <span className="tags" {...rest}>
       {(props.post.tags || []).map((tag, i) => {
-         return [i !== 0 ? ' , ' : null,
+         return [i !== 0 ? ', ' : null,
            <Link key={i} to={{pathname:prefixLink('/tags/'), hash: '#'+tagMap(tag)}}>
              {tag}
            </Link>]

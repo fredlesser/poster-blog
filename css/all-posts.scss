@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.all-posts {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to(small) {
+
+  }
+
+  li {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-bottom: 5px solid $marigold;
+
+    @include respond-to(small) {
+      flex: 0 1 30%;
+    }
+  }
+
+  .article-index__text {
+    padding: 20px 10px;
+
+    h3 {
+      margin: 0 0 5px 0;
+    }
+    a {
+      text-decoration: none;
+      color: $dark;
+    }
+  }
+
+  .article-index__date {
+    font-family: $sans;
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+
+  .article__thumbnail {
+    min-height: 200px;
+    background-size: cover;
+  }
+}

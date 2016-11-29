@@ -30,7 +30,7 @@ class TogglePanel extends React.Component {
       <div className="toggle-panel">
         <a className={this.isOpen('')} onClick={this.togglePanel.bind(this)}></a>
         <ReactCSSTransitionGroup
-          transitionName="slide"
+          transitionName="fade"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           {this.state.showPanel && <Search />}

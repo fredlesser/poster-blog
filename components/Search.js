@@ -4,7 +4,7 @@ import '../css/search.scss'
 const Search = () => {
   return (
     <form className="search-form">
-      <p>Search-form</p>
+      <input type="text" autoFocus={focus} placeholder="Type to search" />
     </form>
   )
 }

@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+.search-form {
+
+  input {
+    border: 1px solid $dark;
+    border-width: 0 0 1px 0;
+    padding: 20px;
+    font-size: 2em;
+  }
+}

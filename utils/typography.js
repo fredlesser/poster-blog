@@ -29,7 +29,7 @@ const options = {
   ],
   headerFontFamily: ['Poppins', 'sans-serif'],
   headerWeight: '300',
-  bodyFontFamily: ['Poppins', 'sans-serif'],
+  bodyFontFamily: ['Crimson Text', 'serif'],
   baseFontSize: '20px',
   baseLineHeight: 1.65,
   scale: 2.25,
