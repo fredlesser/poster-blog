@@ -23,6 +23,9 @@ class PageLinks extends React.Component {
             <span className="date">
               {moment(page.data.date).format('YYYY')}
             </span>
+            <span className="chevron">
+              >
+            </span>
             <Link to={prefixLink(page.path)}>
             {title}
             </Link>
@@ -33,12 +36,6 @@ class PageLinks extends React.Component {
     })
     return (
       <ul className="page-links">
-        {/*<li><h2>Index</h2></li>
-        <li className="page-links__header">
-          <h6 className="date">Published</h6>
-          <h6>Title</h6>
-          <h6 className="tags">Tags</h6>
-        </li>*/}
         {pageLinks}
       </ul>
     )

@@ -1,57 +1,43 @@
 @import 'variables.scss';
-$text-color: lighten($dark, 20%);
 
 .page-links {
+  flex: 0 0 auto;
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $text-color;
+  color: $dark;
   font-weight: 300;
-  flex: 1 0 80%;
-  font-size: 26px;
-  font-family: $serif;
-  text-align: left;
+  font-size: 36px;
+  position: relative;
+  z-index: 1;
 
-  &__header {
-    padding: 5px!important;
+  @include respond-to(small) {
+    flex: 0 1 85%;
   }
 
-  .tags {
-    text-align: right;
-  }
-
-  .tags, .date {
+  .date {
     display: none;
     @include respond-to(small) {
-      display: block;
+      display: inline-block;
+      margin-right: 10px;
     }
   }
 
-  h6 {
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    margin: 0;
-    color: $text-color;
-  }
+  .chevron {
+    display: none;
+    margin-right: 10px;
+    position: relative;
+    top: -3px;
 
-  h2 {
-    color: $text-color;
-    margin-bottom: 0px;
-    font-size: 35px;
+    @include respond-to(small) {
+      display: inline-block;
+    }
   }
 
   li {
-    display: flex;
-    margin-right: 10px;
-    border-bottom: 1px dotted darken($daisy, 50%);
-    // align-items: center;
     margin: 0;
     padding: 10px 5px;
 
-    // &:first-child {
-    //   border: 0;
-    // }
 
     & > *:first-child {
       flex: 0 0 20%;
@@ -62,12 +48,8 @@ $text-color: lighten($dark, 20%);
     }
 
     a {
-      color: $text-color;
+      color: $dark;
       text-decoration: none;
     }
-  }
-
-  .tags a {
-    // display: inline-block;
   }
 }

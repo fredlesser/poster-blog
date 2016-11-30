@@ -41,8 +41,8 @@ class MarkdownWrapper extends React.Component {
         </header>
         <section className="article__title">
           <div className="grid">
-            <p className="article__leader">{post.intro}</p>
             <h1>{post.title}</h1>
+            <p className="article__leader">{post.intro}</p>
           </div>
         </section>
         <section className="article__hero">

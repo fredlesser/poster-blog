@@ -9,6 +9,7 @@
   cursor: pointer;
   font-size: 16px;
   font-family: $sans;
+  position: relative;
 
   &:hover,
   &.active {
@@ -16,7 +17,7 @@
   }
 }
 
-.button--menu {
+.button--toggle-menu {
 
   &::after {
     content: 'Index';
@@ -32,10 +33,8 @@
   }
 }
 
-.button--toggle-panel {
+.button--toggle-search {
   transition: .25s ease-out all;
-  position: relative;
-  z-index: 2;
 
   &::before {
     content: '';
@@ -55,16 +54,13 @@
   }
 }
 
-.button--menu.menu-open {
-  &::before {
-    background: none;
-  }
-  &::after {
-    content: 'x Close';
-  }
-}
+.button--toggle-menu.menu-open,
+.button--toggle-search.search-open {
+  z-index: 2;
 
-.button--toggle-panel.open {
+  &::before {
+    background: url(close.svg) no-repeat;
+  }
   &::after {
     content: 'Close';
   }

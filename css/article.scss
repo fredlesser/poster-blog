@@ -47,6 +47,11 @@
 
 .article__title > .grid {
   display: flex;
+  flex-wrap: wrap;
+
+  @include respond-to(small) {
+    flex-wrap: nowrap;
+  }
 
   h1 {
     color: $dark;
@@ -68,7 +73,7 @@
   font-size: 22px;
   font-weight: 400;
   margin: 0;
-  order: 1;
+
   @include respond-to(small) {
     margin-left: 40px;
     padding: 40px 0 40px 40px;
