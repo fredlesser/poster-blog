@@ -120,6 +120,10 @@
   @include respond-to(small) {
     margin: 5% 0;
   }
+
+  .grid {
+    max-width: 700px;
+  }
 }
 
 .article__subtitle {
@@ -130,9 +134,7 @@
 }
 
 .markdown {
-  columns: 3 200px;
   text-align: justify;
-  column-gap: 50px;
   line-height: 150%;
 }
 

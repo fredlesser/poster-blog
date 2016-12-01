@@ -1,25 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router'
 import DocumentTitle from 'react-document-title'
-
+import moment from 'moment'
 import Summary from 'components/Summary'
 import { config } from 'config'
 import { tagMap, getTags, getAllTags } from 'utils'
 import { prefixLink } from 'gatsby-helpers'
 
-const style = {
-  tagLink: {
-    color: 'inherit',
-    boxShadow: 'none'
-  }
-}
+import '../../css/tags-index.scss'
 
 const TaggedPage = ({page, hideSummary}) => (
   <li>
-    <Link to={prefixLink(page.data.path)}>
-    {page.data.title}
+    <h6>
+      {moment(page.data.date).calendar()}
+    </h6>
+    <h3>
+      <Link to={prefixLink(page.data.path)}>
+      {page.data.title}
     </Link>
-    {hideSummary ? null : <Summary body={page.data.body} />}
+    </h3>
+    {/*{hideSummary ? null : <Summary body={page.data.body} />}*/}
   </li>
 )
 
@@ -28,8 +28,8 @@ const ShowTag = ({tag, pages, hideSummary}) => {
     .filter(getTags)
     .filter(page => getTags(page).map(tagMap).indexOf(tag) !== -1)
   return (
-  <div>
-    <h2><Link style={style.tagLink} to={{pathname: prefixLink('/tags/'), hash: '#' + tagMap(tag)}}> {tag} </Link></h2>
+  <div className="tags-index">
+    <h2>Posts tagged with: <Link to={{pathname: prefixLink('/tags/'), hash: '#' + tagMap(tag)}}> {tag} </Link></h2>
     <ul>
       {taggedPages.map((page, i) => (<TaggedPage hideSummary={hideSummary} key={i} page={page} />))}
     </ul>
@@ -44,12 +44,14 @@ class BlogTags extends React.Component {
     return (
     <DocumentTitle title={tag ? `${tag} - ${config.blogTitle}` : config.blogTitle}>
     <section className="article">
+      <div className="grid">
         {tag ? <ShowTag tag={tag} pages={this.props.route.pages} /> : null}
         {!tag ? allTags.map((tag, i) => <ShowTag
                                           hideSummary={true}
                                           key={i}
                                           tag={tag}
                                           pages={this.props.route.pages} />) : null}
+          </div>
       </section>
     </DocumentTitle>
     )
